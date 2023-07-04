@@ -1,0 +1,28 @@
+server:
+  port: 7002
+spring:
+  application:
+    name: items
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.77.132:3306/health?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  main:
+    allow-bean-definition-overriding: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  redis:
+    host: 192.168.77.132
+    port: 6379
+logging:
+  level:
+    root: debug
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+  instance:
+    prefer-ip-address: true

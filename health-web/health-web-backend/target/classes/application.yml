@@ -1,0 +1,14 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: web-backend
+  main:
+    allow-bean-definition-overriding: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+  instance:
+    prefer-ip-address: true
